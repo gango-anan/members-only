@@ -1,12 +1,16 @@
 <h1>Posts</h1>
 <br/>
-<p id="notice"><%= notice %></p>
+
 <br/>
 <table>
   <thead>
     <tr>
-      <th>Content</th>
-      <th>User ID</th>
+      <% if user_signed_in? %>
+        <th>Content</th>
+        <th>Author</th>
+      <% else%>
+        <th>Content</th>
+      <% end %>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,14 +18,14 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.content %></td>
-        <td><%= post.user_id %></td>
-        <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= post.content %></td>
+          <td><%= post.user_id %></td>
+          <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else%>
+          <td><%= post.content %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
