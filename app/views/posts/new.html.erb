@@ -2,7 +2,7 @@
 
 <%= form_with(model: @post) do |form| %>
   <div class="field form-group">
-    <%= form.label :content %>
+    <% form.label :content %>
     <%= form.text_area :content, class:"form-control" %>
   </div>
   <br/>
