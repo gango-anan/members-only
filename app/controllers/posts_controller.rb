@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:destroy]
+  # before_action :set_post, only: [:destroy]
   before_action :authenticate_user!, except: [:index]
 
   def index
@@ -7,11 +7,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save
@@ -22,18 +22,18 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy
-    @post.destroy
-    respond_to do |format|
-      format.html { redirect_to root_path, notice: "Post was successfully deleted." }
-    end
-  end
+  # def destroy
+  #   @post.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to root_path, notice: "Post was successfully deleted." }
+  #   end
+  # end
 
   private
 
-  def set_post
-    @post = Post.find(params[:id])
-  end
+  # def set_post
+  #   @post = Post.find(params[:id])
+  # end
 
   def post_params
     params.require(:post).permit(:content, :user_id, :user_email)
