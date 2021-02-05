@@ -11,6 +11,11 @@
     <%= form.number_field :user_id, id: :post_user_id, class:"form-control", value:current_user.id, type: :hidden %>
   </div>
   <br/>
+    <div class="field form-group">
+    <% form.label :user_id %>
+    <%= form.text_field :user_email, id: :post_user_email, class:"form-control", value:current_user.email, type: :hidden %>
+  </div>
+  <br/>
   <div class="actions">
     <%= form.submit class:"btn btn-primary" %>
   </div>

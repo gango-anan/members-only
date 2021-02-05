@@ -20,7 +20,7 @@
       <tr>
         <% if user_signed_in? %>
           <td><%= post.content %></td>
-          <td><%= post.user_id %></td>
+          <td><%= post.user_email.split('@').first.capitalize %></td>
           <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% else%>
           <td><%= post.content %></td>
