@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # before_action :set_micropost, only: [:index]
+  before_action :set_post, only: [:destroy]
 
   def index
     @posts = Post.all
@@ -10,7 +10,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    @posts = Post.all
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -19,6 +18,13 @@ class PostsController < ApplicationController
       else
         format.html { render :new, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: "Post was successfully deleted." }
     end
   end
 
