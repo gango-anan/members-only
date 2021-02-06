@@ -4,14 +4,7 @@ module ApplicationHelper
   end
 
   def links_to_display(disp_link)
-    unless user_signed_in?
-      case disp_link
-      when 'Sign Up'
-        'Sign Up'
-      when 'Sign In'
-        'Sign In'
-      end
-    else
+    if user_signed_in?
       case disp_link
       when 'Create New Post'
         'Create New Post'
@@ -20,6 +13,14 @@ module ApplicationHelper
       when 'Sign Out'
         'Sign Out'
       end
+    else
+      case disp_link
+      when 'Sign Up'
+        'Sign Up'
+      when 'Sign In'
+        'Sign In'
+      end
     end
   end
 end
+
