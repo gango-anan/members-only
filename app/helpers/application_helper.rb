@@ -8,8 +8,8 @@ module ApplicationHelper
       case disp_link
       when 'Create New Post'
         'Create New Post'
-      when "current_user.email.split('@').first.capitalize"
-        current_user.email.split('@').first.capitalize
+      when "signed_in_user"
+        "Logged in as: #{ current_user.email.split('@').first.capitalize }"
       when 'Sign Out'
         'Sign Out'
       end
