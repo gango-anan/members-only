@@ -4,17 +4,11 @@
       <div class="card-header font-weight-bold h4">
         Post
       </div>
-      <% if user_signed_in? %>
-        <div class="card-body">
-          <p class="card-text lead"><%= post.content %></p>
-          <hr class="my-4">
-          <h6 class="text-right card-title font-weight-bold">Posted by: <%= post.user_email.split('@').first.capitalize %></h6>
-        </div>
-      <% else%>
-        <div class="card-body">
-          <p class="card-text lead"><%= post.content %></p>
-        </div>
-      <% end %>
+      <div class="card-body">
+        <p class="card-text lead"><%= post.content %></p>
+        <hr class="my-4">
+        <h6 class="text-right card-title font-weight-bold"><%= display_author(post) %></h6>
+      </div>
     </div>
     <br/>
 <% end %>
