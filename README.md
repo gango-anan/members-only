@@ -11,20 +11,20 @@ This is a Members Only application which simulates an exclusive clubhouse where 
 
 ## Built With
 
-- Major languages : Ruby, CSS and HTML
-- Frameworks: Ruby on Rails, Bootstrap
+- Major languages : Ruby, CSS and HTML.
+- Frameworks: Ruby on Rails, Bootstrap.
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://galiwango-members-only.herokuapp.com/)
 
 
 ## Getting started
-To get started with the app,
+To get started with the app:
 
 ### Clone the repo: 
 ```
-$ git clone repo
+$ git clone https://github.com/gango-anan/members-only.git
 
 ```
 
@@ -63,7 +63,7 @@ Galiwango Ananiya
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page]( ).
+Feel free to check the [issues page](https://github.com/gango-anan/members-only/issues).
 
 ## Show your support
 
@@ -76,4 +76,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT]( ) licensed.
+This project is [MIT](https://github.com/gango-anan/members-only/blob/posts-users/LICENSE) licensed.
