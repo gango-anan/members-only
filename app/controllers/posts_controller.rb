@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to root_path, notice: "Post was successfully created." }
+        format.html { redirect_to root_path, notice: 'Post was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -38,5 +38,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:content, :user_id, :user_email)
   end
-  
 end
