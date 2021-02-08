@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+<% @posts.each do |post| %>
+    <div class="card">
+      <div class="card-header font-weight-bold h4">
+        Post
+      </div>
+      <div class="card-body">
+        <p class="card-text lead"><%= post.content %></p>
+        <hr class="my-4">
+        <h6 class="text-right card-title font-weight-bold"><%= "Posted by: #{ display_author(post) }" %></h6>
+      </div>
+    </div>
+    <br/>
+<% end %>

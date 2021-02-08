@@ -1,24 +1,79 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Members Only
+This is a Members Only application which simulates an exclusive clubhouse where members can write anonymous posts. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.[*Exclusive Clubhouse*]
 
-Things you may want to cover:
+### Output with user signed in.
+![User Signed In](./app/assets/images/signedin.png)
 
-* Ruby version
+### Output with user not signed in.
+![User Signed Out](./app/assets/images/signedout.png)
 
-* System dependencies
+## Built With
 
-* Configuration
+- Major languages : Ruby, CSS and HTML.
+- Frameworks: Ruby on Rails, Bootstrap.
 
-* Database creation
+## Live Demo
 
-* Database initialization
+[Live Demo Link](https://galiwango-members-only.herokuapp.com/)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Getting started
+To get started with the app:
 
-* Deployment instructions
+### Clone the repo: 
+```
+$ git clone https://github.com/gango-anan/members-only.git
 
-* ...
+```
+
+## Setup and run the application
+### Install the needed gems:
+```
+$ bundle install --without production
+```
+### Next, migrate the database:
+```
+$ rails db:migrate
+```
+## Run Test
+### Finally, run the test suite to verify that everything is working correctly:
+```
+$ rails test
+```
+### If the test suite passes, you'll be ready to run the app in a local server:
+```
+$ rails server
+```
+### In your browser URL tab, type:
+```
+localhost:3000
+```
+
+## Author
+
+Galiwango Ananiya
+
+- GitHub: [@gango-anan](https://github.com/gango-anan) 
+- Twitter: [@gango_anan](https://twitter.com/gango_anan) 
+- LinkedIn: [@galiwango-ananiya](https://www.linkedin.com/in/galiwango-ananiya-0800821b4/) 
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/gango-anan/members-only/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Credit goes to TheOdinProject.
+
+
+## 📝 License
+
+This project is [MIT](https://github.com/gango-anan/members-only/blob/posts-users/LICENSE) licensed.
