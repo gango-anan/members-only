@@ -76,4 +76,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/gango-anan/members-only/blob/posts-users/LICENSE) licensed.
+This project is [MIT](https://github.com/gango-anan/members-only/blob/development/LICENSE) licensed.
